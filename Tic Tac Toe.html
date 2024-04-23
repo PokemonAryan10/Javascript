@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var turn="x"
+
+function b1click()
+{
+if(document.getElementById("b1").value==" " && checkwinner()==false)
+{
+document.getElementById("b1").value=turn
+console.log(checkdraw)
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+function b2click()
+{
+if(document.getElementById("b2").value==" " && checkwinner()==false)
+{
+document.getElementById("b2").value=turn
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+function b3click()
+{
+if(document.getElementById("b3").value==" " && checkwinner()==false)
+{
+document.getElementById("b3").value=turn
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+function b4click()
+{
+if(document.getElementById("b4").value==" " && checkwinner()==false)
+{
+document.getElementById("b4").value=turn
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+function b5click()
+{
+if(document.getElementById("b5").value==" " && checkwinner()==false)
+{
+document.getElementById("b5").value=turn
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+function b6click()
+{
+if(document.getElementById("b6").value==" " && checkwinner()==false)
+{
+document.getElementById("b6").value=turn
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+function b7click()
+{
+if(document.getElementById("b7").value==" " && checkwinner()==false)
+{
+document.getElementById("b7").value=turn
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+function b8click()
+{
+if(document.getElementById("b8").value==" " && checkwinner()==false)
+{
+document.getElementById("b8").value=turn
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+function b9click()
+{
+if(document.getElementById("b9").value==" " && checkwinner()==false)
+{
+document.getElementById("b9").value=turn
+if(checkwinner()==true)
+{
+alert("The winner is: "+ turn)
+}
+else if(checkdraw()==true)
+{
+alert("The game is a draw.")
+}
+else
+{
+if (turn=="x")
+{
+turn="o"
+}
+else
+{
+turn="x"
+}
+document.getElementById("turn").innerText="Turn:"+turn
+}
+}
+}
+
+
+function checkwinner()
+{
+if(document.getElementById("b1").value==turn && document.getElementById("b2").value==turn && document.getElementById("b3").value==turn)
+{
+return true
+}
+else if(document.getElementById("b4").value==turn && document.getElementById("b5").value==turn && document.getElementById("b6").value==turn)
+{
+return true
+}
+else if(document.getElementById("b7").value==turn && document.getElementById("b8").value==turn && document.getElementById("b9").value==turn)
+{
+return true
+}
+else if(document.getElementById("b1").value==turn && document.getElementById("b4").value==turn && document.getElementById("b7").value==turn)
+{
+return true
+}
+else if(document.getElementById("b2").value==turn && document.getElementById("b5").value==turn && document.getElementById("b8").value==turn)
+{
+return true
+}
+else if(document.getElementById("b3").value==turn && document.getElementById("b6").value==turn && document.getElementById("b9").value==turn)
+{
+return true
+}
+else if(document.getElementById("b1").value==turn && document.getElementById("b5").value==turn && document.getElementById("b9").value==turn)
+{
+return true
+}
+else if(document.getElementById("b3").value==turn && document.getElementById("b5").value==turn && document.getElementById("b7").value==turn)
+{
+return true
+}
+else
+{
+return false
+}
+}
+
+function checkdraw()
+{
+if(document.getElementById("b1").value==" " || document.getElementById("b2").value==" " || document.getElementById("b3").value==" " || document.getElementById("b4").value==" " || document.getElementById("b5").value==" " || document.getElementById("b6").value==" " || document.getElementById("b7").value==" " || document.getElementById("b8").value==" " || document.getElementById("b9").value==" ")
+{
+return false
+}
+else
+{
+return true
+}
+
+}
+</script>
+<style>
+#turn{text-align:center}
+#title{text-align:center}
+.p{margin-top:5678px}
+.square{font-size:24px;text-align:center;background-color:lightgreen;color:purple;border:none;border-radius:15px;box-shadow:0 9px #999;outline:none;text-align:center;text-decoration:none;padding:15px 25px;margin:10px;cursor:pointer;display:inline-block}
+.square:hover{background-color:green}
+.square:active{background-color:darkgreen;box-shadow:0 5px #666;transform:transalateY(4px)}
+#buttons{text-align:center}
+</style>
+</head>
+<body>
+<h1 id="title">Tic Tac Toe<h1>
+
+<div id="buttons">
+<input type="button" class="square" id="b1" value=" " onclick="b1click()">
+<input type="button" class="square" id="b2" value=" " onclick="b2click()">
+<input type="button" class="square" id="b3" value=" " onclick="b3click()">
+<br>
+<input type="button" class="square" id="b4" value=" " onclick="b4click()">
+<input type="button" class="square" id="b5" value=" " onclick="b5click()">
+<input type="button" class="square" id="b6" value=" " onclick="b6click()">
+<br>
+<input type="button" class="square" id="b7" value=" " onclick="b7click()">
+<input type="button" class="square" id="b8" value=" " onclick="b8click()">
+<input type="button" class="square" id="b9" value=" " onclick="b9click()">
+
+<h4 id="turn">Turn:x<h4>
+<p>
+</body>
+</head>

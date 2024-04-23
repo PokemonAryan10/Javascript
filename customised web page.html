@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function bgcolor(color)
+{
+selectedcolor=document.getElementById(color).value
+document.body.style.backgroundColor=selectedcolor
+}
+
+
+function italichead()
+{
+if(document.getElementById("italic").checked) 
+document.getElementById("head").style.fontStyle="italic"
+else
+document.getElementById("head").style.fontStyle="normal"
+}
+
+function underlinehead()
+{
+if(document.getElementById("underline").checked) 
+document.getElementById("head").style.textDecoration="underline"
+else
+document.getElementById("head").style.textDecoration="none"
+}
+
+function headsize()
+{
+fs=document.getElementById("textbox").value
+document.getElementById("head").style.fontSize=fs+"px"
+}
+
+function headcolor(headcolor)
+{
+selectedheadcolor=document.getElementById(headcolor).value
+document.getElementById("head").style.color=selectedheadcolor
+}
+
+function headalign()
+{
+halign=document.getElementById("alignment").value
+document.getElementById("head").style.textAlign=halign
+}
+
+function paracolor(paracolor)
+{
+selectedparacolor=document.getElementById(paracolor).value
+document.getElementById("para").style.color=selectedparacolor
+}
+
+function parasize()
+{
+parafs=document.getElementById("parasizetext").value
+document.getElementById("para").style.fontSize=parafs+"px"
+}
+
+function paraalign()
+{
+palign=document.getElementById("paraalignment").value
+document.getElementById("para").style.textAlign=palign
+}
+
+function paraitalic()
+{
+if(document.getElementById("para_italic").checked)
+document.getElementById("para").style.fontStyle="italic"
+else
+document.getElementById("para").style.fontStyle="normal"
+}
+
+function paraunderline()
+{
+if(document.getElementById("para_underline").checked)
+document.getElementById("para").style.textDecoration="underline"
+else
+document.getElementById("para").style.fontStyle="none"
+}
+
+function parabold()
+{
+if(document.getElementById("bold").checked)
+document.getElementById("para").style.fontWeight="bold"
+else
+document.getElementById("para").style.fontWeight="normal"
+}
+
+function parafont()
+{
+pfont=document.getElementById("font").value
+document.getElementById("para").style.fontFamily=pfont
+}
+
+function imgheightfun()
+{
+imgh=document.getElementById("imgheight").value
+document.getElementById("img").style.height=imgh+"px"
+}
+
+function imgwidthfun()
+{
+imgw=document.getElementById("imgwidth").value
+document.getElementById("img").style.width=imgw+"px"
+}
+
+function imgalignment()
+{
+imalign=document.getElementById("imgalign").value
+document.getElementById("imgp").style.textAlign=imalign
+}
+</script>
+</head>
+<body>
+
+<h1 id="head">Welcome!</h1>
+<p id="para">How are you.</p>
+<p id="imgp">
+<img src="https://www.pgcps.org/globalassets/shared/images/herobanner/h-welcome-bienvenidas-bienvenue.jpg" id="img">
+</p>
+
+<h3>Customisations for page:</h3>
+<p>Background colour</p>
+<input type="radio" name="bgcolor" id="bgblue" value="lightblue" onclick="bgcolor('bgblue')">Blue
+<input type="radio" name="bgcolor" id="bggreen" value="lightgreen" onclick="bgcolor('bggreen')">Green
+<input type="radio" name="bgcolor" id="bgred" value="red" onclick="bgcolor('bgred')">Red
+<input type="radio" name="bgcolor" id="bgyellow" value="yellow" onclick="bgcolor('bgyellow')">Yellow
+
+
+<h3>For heading:</h3>
+<p>For heading style</p>
+<input type="checkbox" id="italic" value="italic" onclick="italichead()">Italic
+<input type="checkbox" id="underline" value="underline" onclick="underlinehead()">Underline
+
+<p>For heading size</p>
+
+<input type=""text" id="textbox" >Enter whole number font size.
+<br>
+<input type="button" value="Submit Heading Size" onclick="headsize()">
+
+<p>For heading color</p>
+
+<input type="radio" name="headcolor" id="headblue" value="blue" onclick="headcolor('headblue')">Blue
+<input type="radio" name="headcolor" id="headgreen" value="green" onclick="headcolor('headgreen')">Green
+<input type="radio" name="headcolor" id="headpurple" value="purple" onclick="headcolor('headpurple')">Purple
+<input type="radio" name="headcolor" id="headorange" value="orange" onclick="headcolor('headorange')">Orange
+
+<p>For heading alignment</p>
+<select id="alignment" onchange="headalign()">
+<option>Left
+<option>Right
+<option>Center
+</select>
+
+<h3>For paragraph:</h3>
+<p>For font color</p>
+<input type="radio" name="paracolor" id="parablue" value="blue" onclick="paracolor('headblue')">Blue
+<input type="radio" name="paracolor" id="paragreen" value="green" onclick="paracolor('headgreen')">Green
+<input type="radio" name="paracolor" id="parapurple" value="purple" onclick="paracolor('headpurple')">Purple
+<input type="radio" name="paracolor" id="paraorange" value="orange" onclick="paracolor('headorange')">Orange
+
+<p>For paragraph size</p>
+<input type="text" id="parasizetext">Enter a whole number font size.
+<br>
+<input type="button" value="Submit Paragraph Size." onclick="parasize()">
+
+<p>For paragraph alignment</p>
+<select id="paraalignment" onchange="paraalign()">
+<option>Left
+<option>Right
+<option>Center
+</select>
+
+<p>For paragraph style</p>
+<input type="checkbox" id="para_italic" value="italic" onclick="paraitalic()">Italic
+<input type="checkbox" id="para_underline" value="underline" onclick="paraunderline()">Underline
+<input type="checkbox" id="bold" value="bold" onclick="parabold()">Bold
+
+<p>For paragraph font</p>
+<select id="font" onchange="parafont()">
+<option>Party LET
+<option>Big Caslo
+<option>Andale Mono
+</select>
+
+<p>For image size</p>
+<input type="text" id="imgheight">Enter a whole number image height.
+<br>
+<input type="button" value="Submit Image Height." onclick="imgheightfun()">
+<br>
+
+<input type="text" id="imgwidth">Enter a whole number image width.
+<br>
+<input type="button" value="Submit Image Width." onclick="imgwidthfun()">
+
+<p>For image alignment</p>
+<select id="imgalign" onchange="imgalignment()">
+<option>Left
+<option>Right
+<option>Center
+</select>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
